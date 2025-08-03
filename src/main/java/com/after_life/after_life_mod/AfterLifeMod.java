@@ -26,7 +26,7 @@ public class AfterLifeMod {
     }
 
     public AfterLifeMod(IEventBus modBus) {
-        ShopMenuType.MENUS.register(modBus);
+        ShopMenuType.SHOP_MENU.get();
         NeoForge.EVENT_BUS.addListener(this::registerCommands);
     }
     private void registerCommands(RegisterCommandsEvent event) {
