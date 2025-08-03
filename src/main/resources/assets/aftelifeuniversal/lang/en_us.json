@@ -1,0 +1,13 @@
+{
+  "itemGroup.aftelifeuniversal": "Example Mod Tab",
+  "block.aftelifeuniversal.example_block": "Example Block",
+  "item.aftelifeuniversal.example_item": "Example Item",
+
+  "aftelifeuniversal.configuration.title": "afte-life-universal Configs",
+  "aftelifeuniversal.configuration.section.aftelifeuniversal.common.toml": "afte-life-universal Configs",
+  "aftelifeuniversal.configuration.section.aftelifeuniversal.common.toml.title": "afte-life-universal Configs",
+  "aftelifeuniversal.configuration.items": "Item List",
+  "aftelifeuniversal.configuration.logDirtBlock": "Log Dirt Block",
+  "aftelifeuniversal.configuration.magicNumberIntroduction": "Magic Number Text",
+  "aftelifeuniversal.configuration.magicNumber": "Magic Number"
+}

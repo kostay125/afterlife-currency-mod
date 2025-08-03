@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="aftelifeuniversal"
+version="1.0.0"
+displayName="After Life Currency"
+description="Сделано с любовью для комплекса серверов After Life"
+authors="kostay125"
