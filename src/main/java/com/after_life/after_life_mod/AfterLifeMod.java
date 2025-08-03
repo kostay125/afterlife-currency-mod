@@ -10,8 +10,6 @@ import com.after_life.after_life_mod.currency.DatabaseCurrencyStorage;
 import java.sql.SQLException;
 import com.after_life.after_life_mod.shop.gui.ShopMenuType;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import com.after_life.after_life_mod.shop.gui.ShopScreenRegistrar;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
@@ -25,8 +23,8 @@ public class AfterLifeMod {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
-    public AfterLifeMod(IEventBus modBus) {
-        ShopMenuType.SHOP_MENU.get();
+    public AfterLifeMod(IEventBus modEventBus) {
+        ShopMenuType.MENUS.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(this::registerCommands);
     }
     private void registerCommands(RegisterCommandsEvent event) {
