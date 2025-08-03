@@ -114,7 +114,6 @@ configurations {
 dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
     implementation "net.neoforged:neoforge:21.0.28"
-    neoForge "net.neoforged:neoforge:${neo_version}"
     implementation "net.neoforged:neoforge:${neo_version}"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
