@@ -14,6 +14,6 @@ public class ShopMenuProvider implements MenuProvider {
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inv, net.minecraft.world.entity.player.Player player) {
-        return new ShopMenu(ShopMenuType.SHOP_MENU.get(), id, inv);
+        return new ShopMenu(id, inv);
     }
 }

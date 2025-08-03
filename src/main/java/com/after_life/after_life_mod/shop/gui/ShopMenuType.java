@@ -18,5 +18,6 @@ public class ShopMenuType {
             DeferredRegister.create(Registries.MENU, AfterLifeMod.MODID);
 
     public static final DeferredHolder<MenuType<?>, MenuType<ShopMenu>> SHOP_MENU =
-            MENUS.register("shop_menu", () -> new MenuType<>(ShopMenu::new, FeatureFlagSet.of()));
+            MENUS.register("shop_menu",
+                    () -> new MenuType<>(ShopMenu::new, FeatureFlagSet.of()));
 }

@@ -9,8 +9,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
 public class ShopMenu extends AbstractContainerMenu {
+    public ShopMenu(int containerId, Inventory playerInventory) {
+        this(ShopMenuType.SHOP_MENU.get(), containerId, playerInventory);
+    }
     public ShopMenu(MenuType<?> type, int containerId, Inventory playerInventory) {
         super(type, containerId);
+        // Ваша логика инициализации
     }
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
