@@ -1,5 +1,6 @@
 package com.after_life.after_life_mod;
 
+import com.after_life.after_life_mod.shop.ShopCommands;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.common.Mod;
 import com.after_life.after_life_mod.currency.CurrencyStorage;
@@ -11,6 +12,8 @@ import com.after_life.after_life_mod.shop.gui.ShopMenuType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import com.after_life.after_life_mod.shop.gui.ShopScreenRegistrar;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
 
 @Mod(AfterLifeMod.MODID)
@@ -22,9 +25,12 @@ public class AfterLifeMod {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
-    public AfterLifeMod(IEventBus modEventBus) {
-        ShopMenuType.register(modEventBus);
-        ShopScreenRegistrar.register(modEventBus);
+    public AfterLifeMod(IEventBus modBus) {
+        ShopMenuType.MENUS.register(modBus);
+        NeoForge.EVENT_BUS.addListener(this::registerCommands);
+    }
+    private void registerCommands(RegisterCommandsEvent event) {
+        ShopCommands.register(event.getDispatcher());
     }
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent event) {
