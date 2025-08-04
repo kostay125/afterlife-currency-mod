@@ -112,7 +112,7 @@ configurations {
 }
 
 dependencies {
-    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
     implementation "net.neoforged:neoforge:21.0.28"
     implementation "net.neoforged:neoforge:${neo_version}"
     // Example optional mod dependency with JEI
