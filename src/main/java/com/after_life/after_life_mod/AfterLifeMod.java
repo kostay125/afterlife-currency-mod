@@ -22,7 +22,7 @@ import java.sql.SQLException;
 @Mod(AfterLifeMod.MODID)
 public class AfterLifeMod {
     public static final String MODID = "aftelifeuniversal";
-    public static final CurrencyManager currencyManager = new InMemoryCurrencyManager();
+    public static CurrencyManager currencyManager;
 
     public static ResourceLocation rl(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
