@@ -44,7 +44,7 @@ public class AfterLifeMod {
         }
 
         // Регистрация конфигурации (если нужно)
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void initializeCurrencyManager() {

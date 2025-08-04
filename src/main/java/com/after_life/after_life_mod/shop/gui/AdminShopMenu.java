@@ -17,7 +17,7 @@ public class AdminShopMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return true; // Или ваша логика проверки доступности меню
+        return player.hasPermissions(2); // Или ваша логика проверки доступности меню
     }
 
     @Override
